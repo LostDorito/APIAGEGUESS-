@@ -11,7 +11,7 @@ import SwiftUI
 class ViewModel: ObservableObject{
     
     @Published var age:Int = 1
-    @Published var name: String = "Kanye"
+    @Published var name:String = "Kanye"
     @MainActor
     func getNameAge() async throws{
         let urlString = "https://api.agify.io/?name=\(name)"

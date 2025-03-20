@@ -8,9 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var name1: String = "Kanye"
     @StateObject var vm: ViewModel = ViewModel()
     var body: some View {
         VStack {
+            TextField("Enter a name!", text: $name1)
+                .onSubmit {
+                    vm.name = name1
+                }
             Button(action: {
                 Task{
                     
