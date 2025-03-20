@@ -13,6 +13,8 @@ struct ContentView: View {
     var body: some View {
         VStack {
             TextField("Enter a name!", text: $name1)
+                .textFieldStyle(.roundedBorder)
+                .frame(width: 100, height: 200)
                 .onSubmit {
                     vm.name = name1
                 }
